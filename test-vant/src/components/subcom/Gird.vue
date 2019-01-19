@@ -13,7 +13,7 @@
 export default {
   data: () => ({
     list: [
-      {id:1, img: 'static/menu1.png', class: '新闻资讯', to:'/home/new'},
+      {id:1, img: 'static/menu1.png', class: '新闻资讯', to:'/home/newList'},
       {id:2, img: 'static/menu2.png', class: '图片分享', to:'/home/share'},
       {id:3, img: 'static/menu3.png', class: '商品购买', to:'/home/buy'},
       {id:4, img: 'static/menu4.png', class: '留言反馈', to:'/home/feedback'},

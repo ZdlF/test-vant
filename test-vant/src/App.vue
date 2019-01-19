@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <!-- 头部 -->
-    <van-nav-bar title="长沙黑马13期Vue项目" fixed left-text="返回" left-arrow/>
+    <van-nav-bar title="栗子我来举" fixed left-text="返回" left-arrow/>
 
 
     <transition enter-active-class="bounceInRight" leave-active-class="fadeOutLeft">
