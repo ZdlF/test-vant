@@ -1,6 +1,6 @@
 <template>
-  <div>
-    share
+  <div class="goodinfo">
+    this is goodinfo + {{$route.params.id}}
   </div>
 </template>
 
@@ -12,6 +12,6 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style lang="less" scoped>
 
 </style>

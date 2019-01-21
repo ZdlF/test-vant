@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 
 // 按需引入方式
-import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card } from 'vant'
+import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card, Tab, Tabs, Lazyload } from 'vant'
 Vue.use(Button)
   .use(NavBar)
   .use(Tabbar)
@@ -11,12 +11,16 @@ Vue.use(Button)
   .use(Swipe)
   .use(SwipeItem)
   .use(Card)
+  .use(Tab)
+  .use(Tabs)
+  .use(Lazyload)
 
 // 引入vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 // vue-resource 配置全局根路径
 Vue.http.options.root = 'http://127.0.0.1:5000/'
+Vue.http.options.emulateJSON = true
 
 // 使用axios
 // import axios from 'axios'

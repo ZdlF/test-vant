@@ -6,12 +6,14 @@ import search from '@/components/tabbar/Search'
 import cart from '@/components/tabbar/Cart'
 import member from '@/components/tabbar/Member'
 import newList from '../components/news/NewList'
-import share from '../components/class/share'
-import buy from '../components/class/Buy'
+import share from '../components/photo/share'
+import goodlist from '../components/goods/Goodlist'
 import feedback from '../components/class/Feedback'
 import video from '../components/class/Video'
 import contact from '../components/class/Contact'
 import newsInfo from '../components/news/NewsInfo'
+import photoInfo from '../components/photo/Photoinfo'
+import goodinfo from '../components/goods/goodinfo'
 
 Vue.use(Router)
 
@@ -24,10 +26,12 @@ export default new Router({
     { path: '/member', component: member },
     { path: '/home/newList', component: newList },
     { path: '/home/share', component: share },
-    { path: '/home/buy', component: buy },
+    { path: '/home/goodlist', component: goodlist },
     { path: '/home/feedback', component: feedback },
     { path: '/home/video', component: video },
     { path: '/home/contact', component: contact },
     { path: '/home/newsInfo/:id', component: newsInfo },
+    { path: '/home/photoInfo/:id', component: photoInfo },
+    { path: '/home/goodinfo/:id', component: goodinfo },
   ]
 })

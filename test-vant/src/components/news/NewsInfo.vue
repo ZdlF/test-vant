@@ -9,6 +9,7 @@
     </div>
     <div>{{newsinfo.content}}</div>
 
+    <!-- 父传子 -->
     <comment :id="id"></comment>
   </div>
 </template>

@@ -15,7 +15,7 @@ export default {
     list: [
       {id:1, img: 'static/menu1.png', class: '新闻资讯', to:'/home/newList'},
       {id:2, img: 'static/menu2.png', class: '图片分享', to:'/home/share'},
-      {id:3, img: 'static/menu3.png', class: '商品购买', to:'/home/buy'},
+      {id:3, img: 'static/menu3.png', class: '商品购买', to:'/home/goodlist'},
       {id:4, img: 'static/menu4.png', class: '留言反馈', to:'/home/feedback'},
       {id:5, img: 'static/menu5.png', class: '视频专区', to:'/home/video'},
       {id:6, img: 'static/menu6.png', class: '联系我们', to:'/home/contact'},
