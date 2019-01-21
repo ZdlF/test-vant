@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <!-- 头部 -->
-    <van-nav-bar title="栗子我来举" fixed left-text="返回" left-arrow/>
+    <van-nav-bar title="栗子我来举" fixed left-text="返回" @click-left="back" left-arrow/>
 
 
     <transition enter-active-class="bounceInRight" leave-active-class="fadeOutLeft">
@@ -25,7 +25,12 @@ export default {
   data: () => ({
     active: 0
   }),
-  methods: {}
+  methods: {
+    back(){
+      // console.log(this.$router)
+      this.$router.go(-1)
+    }
+  }
 };
 </script>
 

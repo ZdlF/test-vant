@@ -32,6 +32,12 @@ export default new Router({
     { path: '/home/contact', component: contact },
     { path: '/home/newsInfo/:id', component: newsInfo },
     { path: '/home/photoInfo/:id', component: photoInfo },
-    { path: '/home/goodinfo/:id', component: goodinfo },
+    
+    // { path: '/home/goodinfo/:id', component: goodinfo },
+    // 编程导航 name + params
+    { name:'goodinfo', path: '/home/goodinfo/:id', component: goodinfo }
+    // path + query ???
+    // { path: '/home/goodinfo', component: goodinfo },
+
   ]
 })

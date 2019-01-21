@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 
 // 按需引入方式
-import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card, Tab, Tabs, Lazyload } from 'vant'
+import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card, Tab, Tabs, Lazyload, Stepper } from 'vant'
 Vue.use(Button)
   .use(NavBar)
   .use(Tabbar)
@@ -14,6 +14,7 @@ Vue.use(Button)
   .use(Tab)
   .use(Tabs)
   .use(Lazyload)
+  .use(Stepper)
 
 // 引入vue-resource
 import VueResource from 'vue-resource'

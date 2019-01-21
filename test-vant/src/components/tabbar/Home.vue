@@ -1,11 +1,6 @@
 <template>
   <div class="home">
-    <van-swipe :autoplay="3000" indicator-color="white">
-      <van-swipe-item v-for="item in lunbotuList" :key="item.img">
-        <img :src="item.img" alt>
-      </van-swipe-item>
-    </van-swipe>
-
+    <swiper :lunbotuList="lunbotuList"></swiper>
     <gird></gird>
 
   </div>
@@ -14,7 +9,7 @@
 <script>
 
 import gird from '../subcom/Gird'
-
+import swiper from '../subcom/Swiper'
 export default {
   data: () => ({
     lunbotuList: []
@@ -48,12 +43,13 @@ export default {
     }
   },
   components: {
-    gird
+    gird,
+    swiper
   }
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .home {
   .van-swipe {
     height: 200px;
@@ -64,6 +60,5 @@ export default {
       }
     }
   }
-
 }
 </style>
