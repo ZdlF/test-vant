@@ -1,6 +1,10 @@
 import Vue from 'vue'
+// 1.引入路由
 import Router from 'vue-router'
+// 2.注册路由
+Vue.use(Router)
 
+// 3.挂载子组件
 import home from '@/components/tabbar/Home'
 import search from '@/components/tabbar/Search'
 import cart from '@/components/tabbar/Cart'
@@ -15,9 +19,9 @@ import newsInfo from '../components/news/NewsInfo'
 import photoInfo from '../components/photo/Photoinfo'
 import goodinfo from '../components/goods/goodinfo'
 
-Vue.use(Router)
-
+// 4.实例化路由 并暴露
 export default new Router({
+  // 5.配置路由规则
   routes: [
     { path: '/', redirect: '/home' },
     { path: '/home', component: home },

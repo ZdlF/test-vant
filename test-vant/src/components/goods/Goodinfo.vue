@@ -45,11 +45,11 @@ export default {
     id: "",
     lunbotuList: [],  // 轮播图数据
     goodList: {},  // 商品详情
-    value: 1,   // 步进qi默认值
+    value: 1,   // 步进器默认值
     ballFlag: false, // 控制小球显示隐藏
-    btnFlag: false,
-    Xrect: null,
-    Yrect: null
+    btnFlag: false, // 禁用按钮 节流阀
+    Xrect: null,   // 小球动画的X轴移动距离
+    Yrect: null   // 小球动画的Y轴移动距离
   }),
   created() {
     this.id = this.$route.params.id
@@ -66,6 +66,8 @@ export default {
       } = await this.$http.get("api/getthumimages/" + idd)
       if (status === 0) {
         this.lunbotuList = message
+        console.log(message)
+
       }
     },
     // 商品详情
@@ -93,13 +95,28 @@ export default {
       this.ballFlag = !this.ballFlag
     },
     // 进行动画
+    // 
     addshopcar() {
       this.ballFlag = !this.ballFlag
       this.btnFlag = true
       setTimeout(() => {
         this.btnFlag = false
       },600)
+
+      // 创建一个对象存储用户添加的商品信息
+      let goodinfo = {
+        id: this.id,
+        count: this.value,
+        title: this.goodList.title,
+        price: this.goodList.sell_price,
+        src: this.lunbotuList[0].src,
+        selected: true,
+
+      }
+      // 调用addCart 将商品对象保存到localStorage中
+      this.$store.commit('addCart',goodinfo)
     },
+    
     // 在屏幕滚动后 小球位置会发生改变，这时候在动画中写的死距离就用不了了，所以需要计算出小球移动后的位置
     //  在计算出徽标的位置 ，用徽标位置减去小球位置得出移动的距离 写入动画中
     addcar() {

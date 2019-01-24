@@ -5,6 +5,7 @@
 
 
     <transition enter-active-class="bounceInRight" leave-active-class="fadeOutLeft">
+      <!-- 7. 渲染路由 -->
       <router-view class="animated"></router-view>
     </transition>
 
@@ -13,7 +14,7 @@
     <van-tabbar v-model="active" fixed>
       <van-tabbar-item to="/home" icon="home-o">首页</van-tabbar-item>
       <van-tabbar-item to="/search" icon="search">搜索</van-tabbar-item>
-      <van-tabbar-item to="/cart" icon="shopping-cart-o" info="5">购物车</van-tabbar-item>
+      <van-tabbar-item to="/cart" icon="shopping-cart-o" :info="$store.getters.proCount">购物车</van-tabbar-item>
       <van-tabbar-item to="member" icon="user-o">会员</van-tabbar-item>
     </van-tabbar>
   </div>
@@ -23,13 +24,17 @@
 export default {
   name: "App",
   data: () => ({
-    active: 0
+    active: 0,
+
   }),
+  created(){
+
+  },
   methods: {
     back(){
       // console.log(this.$router)
       this.$router.go(-1)
-    }
+    },
   }
 };
 </script>

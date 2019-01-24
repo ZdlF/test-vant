@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import App from './App'
+// 6.1 引入路由 
 import router from './router'
 
+// 引入vuex 的 store
+import store from './store'
+
 // 按需引入方式
-import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card, Tab, Tabs, Lazyload, Stepper } from 'vant'
+import { Button, NavBar, Tabbar, TabbarItem, Swipe, SwipeItem, Card, Tab, Tabs, Lazyload, Stepper, SubmitBar } from 'vant'
 Vue.use(Button)
   .use(NavBar)
   .use(Tabbar)
@@ -15,6 +19,7 @@ Vue.use(Button)
   .use(Tabs)
   .use(Lazyload)
   .use(Stepper)
+  .use(SubmitBar)
 
 // 引入vue-resource
 import VueResource from 'vue-resource'
@@ -45,7 +50,10 @@ Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
+  // 6.2 挂载路由
   router,
+  // 挂载 store
+  store,
   // components: { App },
   // template: '<App/>'
   render: c => c(App)
