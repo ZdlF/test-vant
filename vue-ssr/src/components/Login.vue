@@ -2,6 +2,11 @@
   <div class="login">
     <mt-button type="default">default</mt-button>
     this is login component
+    <div>
+      <mark>{{ $store.state.count }}</mark>
+      <h2>{{ $store.getters.msg }}</h2>
+      <button @click="add">add</button>
+    </div>
   </div>
 </template>
 
@@ -10,7 +15,13 @@
 export default {
   data: () => ({
 
-    })
+  }),
+  methods: {
+    add() {
+      // 调用store mutations中定义的的方法
+      this.$store.commit('add')
+    }
+  }
 };
 </script>
 

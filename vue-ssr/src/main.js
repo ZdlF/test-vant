@@ -3,6 +3,9 @@ import App from './App'
 // 引入路由
 import router from './router' // 会自动到router文件中寻找index.js 文件
 
+// e. 引入store 并挂载
+import store from './store'
+
 // 引入mint-ui
 // 全局引入方式
 // import MintUI from 'mint-ui'
@@ -22,5 +25,6 @@ new Vue({
   el: '#app',
   // 6. 引入路由 挂载路由
   router,
+  store,
   render: c => c(App)
 })
