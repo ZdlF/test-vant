@@ -33,7 +33,7 @@ Vue.http.options.emulateJSON = true
 // axios 不能直接挂载到Vue上 通过原型挂载
 // Vue.prototype.axios = axios
 // axios 配置全局根路径
-// axios.defaults.baseURl = 'http://127.0.0.1:5000/'
+// axios.defaults.baseURL = 'http://127.0.0.1:5000/'
 
 
 // 引入 animate
